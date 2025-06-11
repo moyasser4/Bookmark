@@ -46,6 +46,10 @@ function display() {
 function clear() {
   siteNameInput.value = null;
   siteURLInput.value = null;
+  siteURLInput.classList.remove("is-valid");
+  siteURLInput.classList.remove("is-invalid");
+  siteNameInput.classList.remove("is-valid");
+  siteNameInput.classList.remove("is-invalid");
 }
 
 function deleteLink(deletedIndex) {
