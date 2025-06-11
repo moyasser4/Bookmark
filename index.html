@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.22.0/dist/sweetalert2.min.css
+"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Bookmark</title>
+  </head>
+  <body class="py-5">
+    <div class="header">
+      <div class="container d-flex justify-content-center">
+        <h1 class="position-relative">Bookmarker</h1>
+      </div>
+    </div>
+
+    <div class="inputContainer">
+      <div class="container">
+        <h2 class="text-center">
+          <i class="fa-solid fa-bookmark"></i>
+          Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <div class="input site-name mb-4">
+          <label for="siteName" class="mb-2 fw-bold"
+            ><i class="fa-solid fa-book-bookmark me-2"></i> Site Name</label
+          >
+          <input
+            oninput="validateInput(this)"
+            type="text"
+            class="form-control"
+            id="siteName"
+            placeholder="Bookmark Name"
+          />
+        </div>
+        <div class="input site-url mb-4">
+          <label for="siteURL" class="mb-2 fw-bold"
+            ><i class="fa-solid fa-link me-2"></i> Site URL</label
+          >
+          <input
+            oninput="validateInput(this)"
+            type="url"
+            class="form-control"
+            id="siteURL"
+            placeholder="Website URL"
+          />
+        </div>
+        <div class="buttons text-center">
+          <button onclick="addLink()" type="button" class="btn btn-submit">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bookmark-table mt-4">
+      <div class="container">
+        <button onclick="deleteAll()" class="btn btn-danger mb-2">
+          Delete All
+        </button>
+        <table class="table table-striped text-center">
+          <thead>
+            <tr>
+              <th scope="col">Index</th>
+              <th scope="col">Website Name</th>
+              <th scope="col">Visit</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.22.0/dist/sweetalert2.all.min.js
+"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
